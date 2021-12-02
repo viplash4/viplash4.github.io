@@ -249,6 +249,7 @@ ol ol ol li::before {
 ::-webkit-scrollbar{
     width: 1vw;
     background: transparent;
+    cursor: none;
 }
 ::-webkit-scrollbar-track-piece{
     background: transparent;
