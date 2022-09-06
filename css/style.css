@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&family=Capriola&family=Hind+Guntur:wght@500&display=swap');
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #090112; /*#090112*/
+    cursor: none;
+    overflow-x: hidden;
+    color: white;
+}
+
+a:hover{
+    cursor: none;
+}
+h1{
+    
+    font-size: 15vh;
+    font-family: Capriola;
+    color: #e0ffff;
+    margin: 0;
+}
+h2 {
+    font-size: 10vh;
+    font-family: Capriola;
+    color: #e0ffff;
+    margin: 0;
+}
+p {
+    font-size: 3vh;
+    font-family: Capriola;
+    color: #e0ffff;
+    margin-top: 5%;
+}
+h3{
+    font-size: 7vh;
+    font-family: Capriola;
+    color: #e0ffff;
+    margin-top: 5vh;
+    margin-right: 4vh ;
+    text-align: right;
+}
+/*----------------------------cursor-----------------------------*/
+.inner-cursor{
+    position:fixed;
+    left: 10px;
+    width: 3vh;
+    height: 3vh;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+
+}
+
+.inner-cursor.grow {
+    width: 10vh;
+    height: 10vh;
+    transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 10vh;
+    height: 10vh;
+    transform: translate(-50%,-50%);
+    border: 0.8vh solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.05s;
+}
+
+/*------------------------------------cursor---------------------------------------------*/
+
+
+
+/*----------------------------------------------slides---------------------------------------*/
+.slide{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+    
+}
+.intro__section{
+    background: url(/img/intro_art.svg);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position-x: 90vh;
+    background-position-y: 5vh;
+    background-attachment: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.text__block{
+    margin-top: 5%;
+    padding-right: 10%;
+}
+.slide-in{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+
+.slide-in.active{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: -1;
+}
+.astronaut{
+    padding: 4vh;
+    height: 60vh;
+    animation: myturn 10s infinite;
+    z-index: -1;
+}
+@keyframes myturn {
+
+    25% {transform: scale(0.5) rotate(90deg);}
+    50% {transform: scale(0.9) rotate(180deg);}
+    75% {transform: scale(0.7) rotate(270deg);}
+    100% {transform: scale(0.5) rotate(360deg);}
+}
+.interest__section{
+    background: url(/img/space.svg);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position-x: 90vh;
+    background-position-y: 5vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+.interest__title{
+    margin: 5%;
+}
+.tagboard{
+    display: inline-block;
+    margin: 5%;
+}
+.tag{
+    font-size: 4vh;
+    font-family: Capriola;
+    color: #e0ffff;
+    padding: 0.5%;
+    margin: 0.5%;
+    display: inline-block;
+    border-radius: 9px;
+    border: solid;  
+    transition: 0.7s ; 
+}
+.bd-red:hover{
+    border-color: #A20021;
+    color: #A20021;
+}
+.bd-radred:hover{
+    border-color: #F52F57;
+    color: #F52F57;
+}
+.bd-sizzred:hover{
+    border-color: #F64B59;
+    color: #F64B59;
+}
+.bd-bittersweet:hover{
+    border-color: #F6665A;
+    color: #F6665A;
+}
+.bd-brown:hover{
+    border-color: #F79D5C;
+    color: #F79D5C;
+}
+.bd-pumpkin:hover{
+    border-color: #F3752B;
+    color: #F3752B;
+}
+
+.contact__section{
+    background: url(/img/star.svg);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position-x: 90vh;
+    background-position-y: 5vh;
+    background-attachment: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.contact__section img{
+    width: 8vh;
+    filter: brightness(0) invert(1);
+    z-index: -1;
+}
+.links-row{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+
+::-webkit-scrollbar{
+    width: 1vw;
+    background: transparent;
+    cursor: none;
+}
+::-webkit-scrollbar-track-piece{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: turquoise;
+    border-radius: 50px;
+    opacity: 0.4;
+}
